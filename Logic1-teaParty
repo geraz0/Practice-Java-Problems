@@ -1,0 +1,22 @@
+public int teaParty(int tea, int candy) {
+    // Check if either tea or candy is less than 5
+    if (tea < 5 || candy < 5) {
+        // If either is less than 5, the party is bad (0)
+        return 0;
+    }
+    
+    // Check if tea is at least double candy, or candy is at least double tea
+    if (tea >= 2 * candy || candy >= 2 * tea) {
+        // If one is double or more the amount of the other, the party is great (2)
+        return 2;
+    }
+    
+    // If neither of the above conditions are true but both are at least 5
+    if (tea >= 5 && candy >= 5) {
+        // The party is good (1)
+        return 1;
+    }
+    
+    // By default, consider the party bad (0), though this line should not be reached
+    return 0;
+}
