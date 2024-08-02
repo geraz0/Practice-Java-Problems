@@ -1,0 +1,14 @@
+public int maxMod5(int a, int b) {
+    // Check if both numbers are the same
+    if (a == b) {
+        // If they are the same, return 0
+        return 0;
+    }
+    // Check if both numbers have the same remainder when divided by 5
+    if (a % 5 == b % 5) {
+        // If true, return the smaller value
+        return Math.min(a, b);
+    }
+    // Otherwise, return the larger value
+    return Math.max(a, b);
+}

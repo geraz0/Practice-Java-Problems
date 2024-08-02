@@ -1,0 +1,25 @@
+public int loneSum(int a, int b, int c) {
+    // Initialize the sum to zero.
+    int sum = 0;
+
+    // Check if 'a' is unique by comparing it with 'b' and 'c'.
+    if (a != b && a != c) {
+        // If 'a' is unique, add it to the sum.
+        sum += a;
+    }
+
+    // Check if 'b' is unique by comparing it with 'a' and 'c'.
+    if (b != a && b != c) {
+        // If 'b' is unique, add it to the sum.
+        sum += b;
+    }
+
+    // Check if 'c' is unique by comparing it with 'a' and 'b'.
+    if (c != a && c != b) {
+        // If 'c' is unique, add it to the sum.
+        sum += c;
+    }
+
+    // Return the calculated sum.
+    return sum;
+}

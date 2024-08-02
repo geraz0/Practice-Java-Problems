@@ -1,0 +1,29 @@
+public int blackjack(int a, int b) {
+    // First, check if both numbers are greater than 21.
+    if (a > 21 && b > 21) {
+        // If both numbers are over 21, return 0 because neither is valid.
+        return 0;
+    }
+
+    // Next, check if 'a' is greater than 21.
+    if (a > 21) {
+        // If 'a' is over 21, it can't be used, so return 'b'.
+        return b;
+    }
+
+    // Then, check if 'b' is greater than 21.
+    if (b > 21) {
+        // If 'b' is over 21, it can't be used, so return 'a'.
+        return a;
+    }
+
+    // If neither number is over 21, decide which one is closer to 21.
+    // This is done by comparing the differences of each from 21.
+    if ((21 - a) < (21 - b)) {
+        // If 'a' is closer to 21, return 'a'.
+        return a;
+    } else {
+        // Otherwise, return 'b' because it is either closer or equally close to 21 as 'a'.
+        return b;
+    }
+}

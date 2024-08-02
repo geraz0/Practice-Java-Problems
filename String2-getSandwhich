@@ -1,0 +1,17 @@
+public String getSandwich(String str) {
+    // Look for the first occurrence of "bread"
+    int firstBread = str.indexOf("bread");
+    // Look for the last occurrence of "bread"
+    int lastBread = str.lastIndexOf("bread");
+
+    // Check if there is more than one occurrence of "bread"
+    if (firstBread != lastBread && firstBread != -1) {
+        // Extract the substring between the first and the last "bread"
+        // The start index is after the first "bread" (5 characters long), hence 'firstBread + 5'
+        // The end index is the start of the last "bread"
+        return str.substring(firstBread + 5, lastBread);
+    }
+
+    // If there's less than two "breads", return an empty string
+    return "";
+}

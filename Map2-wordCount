@@ -1,0 +1,19 @@
+public Map<String, Integer> wordCount(String[] strings) {
+    // Create a new HashMap to store the frequency of each string
+    Map<String, Integer> map = new HashMap<>();
+
+    // Loop through each string in the input array
+    for (String s : strings) {
+        // Check if the map already contains the string
+        if (map.containsKey(s)) {
+            // If it does, increment the current count
+            map.put(s, map.get(s) + 1);
+        } else {
+            // Otherwise, initialize the count to 1
+            map.put(s, 1);
+        }
+    }
+
+    // Return the map containing all strings and their counts
+    return map;
+}

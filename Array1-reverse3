@@ -1,0 +1,12 @@
+public int[] reverse3(int[] nums) {
+    // Create a new array to store the reversed elements
+    int[] result = new int[3];
+
+    // Assign elements from the original array to the new array in reverse order
+    result[0] = nums[2];
+    result[1] = nums[1];
+    result[2] = nums[0];
+
+    // Return the new array with the elements reversed
+    return result;
+}

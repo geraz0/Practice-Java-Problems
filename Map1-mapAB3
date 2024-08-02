@@ -1,0 +1,16 @@
+public Map<String, String> mapAB3(Map<String, String> map) {
+    // Check if the key "a" is present and "b" is not
+    if (map.containsKey("a") && !map.containsKey("b")) {
+        // Set the value of "b" to be the same as that of "a"
+        map.put("b", map.get("a"));
+    }
+    // Check if the key "b" is present and "a" is not
+    else if (map.containsKey("b") && !map.containsKey("a")) {
+        // Set the value of "a" to be the same as that of "b"
+        map.put("a", map.get("b"));
+    }
+    // If both keys exist or neither key exists, do nothing
+
+    // Return the updated map
+    return map;
+}

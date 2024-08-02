@@ -1,0 +1,12 @@
+public int sum3(int[] nums) {
+    // Initialize a sum variable to hold the cumulative total
+    int sum = 0;
+
+    // Iterate over each element in the array to add its value to the sum
+    for (int num : nums) {
+        sum += num;
+    }
+
+    // Return the total sum of the elements in the array
+    return sum;
+}

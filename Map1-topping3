@@ -1,0 +1,14 @@
+public Map<String, String> topping3(Map<String, String> map) {
+    // Check if the key "potato" exists in the map
+    if (map.containsKey("potato")) {
+        // Set the value of "fries" to be the same as the value of "potato"
+        map.put("fries", map.get("potato"));
+    }
+    // Check if the key "salad" exists in the map
+    if (map.containsKey("salad")) {
+        // Set the value of "spinach" to be the same as the value of "salad"
+        map.put("spinach", map.get("salad"));
+    }
+    // Return the updated map
+    return map;
+}

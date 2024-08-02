@@ -1,0 +1,25 @@
+public int roundSum(int a, int b, int c) {
+    // Calculate the rounded values for a, b, and c by calling the round10 helper method.
+    int roundedA = round10(a);
+    int roundedB = round10(b);
+    int roundedC = round10(c);
+
+    // Sum the rounded values and return the total.
+    return roundedA + roundedB + roundedC;
+}
+
+public int round10(int num) {
+    // Find the rightmost digit of the number to determine how to round.
+    int rightmostDigit = num % 10;
+
+    // If the rightmost digit is 5 or more, we round up to the next multiple of 10.
+    if (rightmostDigit >= 5) {
+        // To round up, add 10, then subtract the rightmost digit.
+        return num + 10 - rightmostDigit;
+    }
+    // If the rightmost digit is less than 5, we round down to the previous multiple of 10.
+    else {
+        // To round down, simply subtract the rightmost digit.
+        return num - rightmostDigit;
+    }
+}

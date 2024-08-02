@@ -1,0 +1,14 @@
+public int dateFashion(int you, int date) {
+    // Check if either you or your date has a style rating of 2 or less
+    if (you <= 2 || date <= 2) {
+        // If either is 2 or less, the result is 0 (no table)
+        return 0;
+    }
+    // Check if either you or your date has a style rating of 8 or more
+    if (you >= 8 || date >= 8) {
+        // If either is 8 or more, the result is 2 (yes, you get a table)
+        return 2;
+    }
+    // If none of the above conditions are met, the result is 1 (maybe)
+    return 1;
+}

@@ -1,0 +1,29 @@
+public String alarmClock(int day, boolean vacation) {
+    // Determine if it's a weekday (Monday to Friday)
+    boolean isWeekday = day >= 1 && day <= 5;
+
+    // Determine if it's a weekend (Sunday or Saturday)
+    boolean isWeekend = day == 0 || day == 6;
+
+    // Check if we are on vacation
+    if (vacation) {
+        if (isWeekday) {
+            // During vacation, on weekdays the alarm should be "10:00"
+            return "10:00";
+        } else if (isWeekend) {
+            // During vacation, on weekends the alarm should be "off"
+            return "off";
+        }
+    } else {
+        if (isWeekday) {
+            // On normal weekdays, the alarm should be "7:00"
+            return "7:00";
+        } else if (isWeekend) {
+            // On normal weekends, the alarm should be "10:00"
+            return "10:00";
+        }
+    }
+
+    // The code should not reach this point but it's here to satisfy the compiler
+    return "7:00";
+}

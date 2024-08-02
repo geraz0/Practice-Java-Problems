@@ -1,0 +1,16 @@
+public int countHi(String str) {
+    // Initialize a counter to keep track of the number of times "hi" appears.
+    int count = 0;
+
+    // Loop through the string, stopping two characters before the end to avoid out-of-bounds errors.
+    for (int i = 0; i < str.length() - 1; i++) {
+        // Check if the current character and the next one form the substring "hi".
+        if (str.substring(i, i + 2).equals("hi")) {
+            // If they do, increment the count.
+            count++;
+        }
+    }
+
+    // Return the total count of "hi" found in the string.
+    return count;
+}
