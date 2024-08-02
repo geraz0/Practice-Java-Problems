@@ -1,0 +1,4 @@
+public String makeAbba(String a, String b) {
+    // Concatenate the strings in the order a, b, b, and a
+    return a + b + b + a;
+}
