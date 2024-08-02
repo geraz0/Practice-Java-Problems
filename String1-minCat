@@ -1,0 +1,11 @@
+public String minCat(String a, String b) {
+    // Determine the length of the shorter string
+    int minLength = Math.min(a.length(), b.length());
+    
+    // Use substring to trim the longer string from the front to match the length of the shorter string
+    String trimmedA = a.substring(a.length() - minLength);
+    String trimmedB = b.substring(b.length() - minLength);
+    
+    // Concatenate the two trimmed strings
+    return trimmedA + trimmedB;
+}
