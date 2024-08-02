@@ -1,0 +1,9 @@
+public String makeOutWord(String out, String word) {
+    // Use substring to extract the first half of the "out" string (first two characters)
+    String firstHalf = out.substring(0, 2);
+    // Use substring to extract the second half of the "out" string (last two characters)
+    String secondHalf = out.substring(2);
+
+    // Concatenate the first half, the word, and the second half
+    return firstHalf + word + secondHalf;
+}
