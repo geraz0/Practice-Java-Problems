@@ -1,0 +1,19 @@
+public String stringYak(String str) {
+    // Initialize an empty string to build the result
+    String result = "";
+
+    // Iterate over each character in the input string
+    for (int i = 0; i < str.length(); i++) {
+        // Check if the current character starts a sequence "yak"
+        if (i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k') {
+            // If true, skip the next two characters (i.e., "a" and "k" in "yak")
+            i = i + 2;
+        } else {
+            // If it's not a "yak" pattern, append the current character to the result
+            result += str.charAt(i);
+        }
+    }
+  
+    // Return the modified string after removing all "yak" patterns
+    return result;
+}
