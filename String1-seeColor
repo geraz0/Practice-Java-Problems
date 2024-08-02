@@ -1,0 +1,14 @@
+public String seeColor(String str) {
+    // Check if the string starts with "red"
+    if (str.startsWith("red")) {
+        // If it starts with "red", return "red"
+        return "red";
+    }
+    // Check if the string starts with "blue"
+    else if (str.startsWith("blue")) {
+        // If it starts with "blue", return "blue"
+        return "blue";
+    }
+    // If the string does not start with "red" or "blue", return an empty string
+    return "";
+}
