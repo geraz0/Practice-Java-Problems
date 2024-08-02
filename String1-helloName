@@ -1,0 +1,4 @@
+public String helloName(String name) {
+    // Return a greeting message that incorporates the given name
+    return "Hello " + name + "!";
+}
